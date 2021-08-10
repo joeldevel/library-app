@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Library App</title>
+  </head>
+  <body>
+    <h1>Library App <small>From TOP projects</small></h1>
+    <div class="input-form-container">
+      <form action="#">
+        <div class="input-container">
+          <label for="title">title:</label>
+          <input type="text" name="title" id="title">
+        </div>
+        <!-- title, author, pages, read -->
+        <div class="input-container">
+          <label for="author">author:</label>
+          <input type="text" name="author" id="author">
+        </div>
+        <div class="input-container">
+          <label for="pages">pages:</label>
+          <input type="text" name="pages" id="pages">
+        </div>
+        <div class="input-container">
+          <label>read:</label>
+          <label for="read-true">Yes</label>
+          <!-- <input type="text" name="read" id="read"> -->
+          <input type="radio" id="read-true" name="read" value="true">
+          <label for="read-false">No</label>
+          <input type="radio" id="read-false" name="read" value="false">
+        </div>
+
+        <input type="submit" name="create-new-book" id="create-new-book" value="create book">
+      </form>
+    </div>
+    <hr>
+    <div class="display-books-table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>title</th>
+            <th>author</th>
+            <th>pages</th>
+            <th>read</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="display-books">
+
+        </tbody>
+      </table>
+    </div>
+
+    <script type="text/javascript" src="books.js"></script>
+  </body>
+</html>
