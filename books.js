@@ -26,9 +26,14 @@ class Book {
     this.readStatus = this.read ? 'already read' : 'not read yet'
   }
 
+  toggleReadStatus() {
+    this.read = !this.read;
+  }
+
   info() {
     return `${this.title} by ${this.author}, ${pages} pages, ${readStatus}.`;
   }
+
 }
 
 function addBookToLibrary(e) {
@@ -129,36 +134,3 @@ document.querySelector('body').addEventListener('click', function(event) {
     }
   }
 });
-
-
-//********************************************************************/
-//               add functionality to book
-//********************************************************************/
-function toggleReadStatus() {
-  this.read = !this.read;
-}
-
-Book.prototype.toggleReadStatus = toggleReadStatus;
-
-
-// examples
-// console.log(book1.info());
-
-// Student.prototype.sayName = function() {
-//   console.log(this.name)
-// }
-
-
-// let index = myArray.findIndex( element => {
-//   if (element.name === 'Maria') {
-//     return true;
-//   }
-// });
-
-/*
-for (let i of read) {
-if (i.checked) {
-    console.log(i);
-  }
-}
-*/
